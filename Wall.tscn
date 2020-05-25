@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Wall.gd" type="Script" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[node name="Wall" type="Line2D"]
+material = SubResource( 1 )
+points = PoolVector2Array( 208.981, 54.5986, 360.968, 211.596, 543.018, 353.561, 601.474, 432.06, 771.833, 418.699, 905.448, 415.358, 1010.67, 475.485 )
+width = 50.0
+default_color = Color( 0.960938, 0.967448, 1, 1 )
+texture_mode = 1
+script = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 997.637, 496.82, 898.957, 439.501, 772.475, 443.69, 593.93, 455.895, 525.594, 371.489, 343.758, 229.73, 190.519, 71.4555, 227.443, 37.7418, 378.177, 193.462, 560.442, 335.634, 609.018, 408.226, 771.191, 393.707, 911.938, 391.216, 1023.7, 454.15 )

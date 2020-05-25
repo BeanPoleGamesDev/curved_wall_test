@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://grass2.png" type="Texture" id=2]
+[ext_resource path="res://ball.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.7583
+
+[node name="Game" type="Node2D"]
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7.22, 14.44 )
+points = PoolVector2Array( 16.1326, 490.76, 437.6, 347.263, 525.143, 385.168, 601.474, 432.06, 771.833, 418.699, 905.448, 415.358, 1010.67, 475.485 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0"]
+polygon = PoolVector2Array( 997.637, 496.82, 898.957, 439.501, 772.475, 443.69, 597.385, 456.723, 513.01, 407.026, 441.961, 371.879, 23.4957, 514.651, 8.76952, 466.869, 433.239, 322.646, 537.276, 363.309, 605.563, 407.397, 771.191, 393.707, 911.938, 391.216, 1023.7, 454.15 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 375.359, 217.364 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+scale = Vector2( 5.28552, 5.28552 )
+texture = ExtResource( 3 )
+
+[editable path="Wall"]
