@@ -10,15 +10,16 @@ radius = 20.7583
 [node name="Game" type="Node2D"]
 
 [node name="Wall" parent="." instance=ExtResource( 1 )]
-position = Vector2( -7.22, 14.44 )
-points = PoolVector2Array( 16.1326, 490.76, 437.6, 347.263, 525.143, 385.168, 601.474, 432.06, 771.833, 418.699, 905.448, 415.358, 1010.67, 475.485 )
+position = Vector2( -4.8873, 16.7727 )
+points = PoolVector2Array( 47.1235, -3.80299, 167.258, 234.133, 330.547, 424.248, 489.171, 489.564, 613.97, 507.059, 762.097, 517.556, 934.717, 494.229, 983.704, 465.07 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0"]
-polygon = PoolVector2Array( 997.637, 496.82, 898.957, 439.501, 772.475, 443.69, 597.385, 456.723, 513.01, 407.026, 441.961, 371.879, 23.4957, 514.651, 8.76952, 466.869, 433.239, 322.646, 537.276, 363.309, 605.563, 407.397, 771.191, 393.707, 911.938, 391.216, 1023.7, 454.15 )
+polygon = PoolVector2Array( 995.858, 486.917, 939.766, 518.714, 762.366, 542.555, 610.695, 531.843, 481.462, 513.345, 314.442, 443.37, 146.019, 247.32, 24.4873, 6.80834, 69.7598, -14.4143, 188.497, 220.945, 346.652, 405.126, 496.88, 465.782, 617.246, 482.274, 761.828, 492.558, 929.668, 469.744, 971.549, 443.224 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 375.359, 217.364 )
+position = Vector2( 111.764, 36.5792 )
+gravity_scale = 7.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 1 )
