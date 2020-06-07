@@ -10,12 +10,22 @@ radius = 20.7583
 [node name="Game" type="Node2D"]
 
 [node name="Wall" parent="." instance=ExtResource( 1 )]
-position = Vector2( -4.8873, 16.7727 )
-points = PoolVector2Array( 47.1235, -3.80299, 167.258, 234.133, 330.547, 424.248, 489.171, 489.564, 613.97, 507.059, 762.097, 517.556, 934.717, 494.229, 983.704, 465.07 )
+position = Vector2( -4.8873, 14.188 )
+points = PoolVector2Array( 37.2956, 52.3598, 136.738, 78.4625, 201.425, 167.38, 312.568, 184.18 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0"]
-polygon = PoolVector2Array( 995.858, 486.917, 939.766, 518.714, 762.366, 542.555, 610.695, 531.843, 481.462, 513.345, 314.442, 443.37, 146.019, 247.32, 24.4873, 6.80834, 69.7598, -14.4143, 188.497, 220.945, 346.652, 405.126, 496.88, 465.782, 617.246, 482.274, 761.828, 492.558, 929.668, 469.744, 971.549, 443.224 )
+visible = false
+polygon = PoolVector2Array( 308.111, 208.78, 187.923, 188.42, 121.799, 98.5081, 30.245, 76.345, 44.3462, 28.3747, 151.677, 58.417, 214.927, 146.339, 317.024, 159.581 )
+
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4.8873, 16.7727 )
+points = PoolVector2Array( 35.8874, 550.228, 247.888, 448.228, 430.172, 400.004, 581.378, 304.369, 742.923, 222.951, 841.142, 145.41, 943.038, 85.0277, 1016.19, 67.9277 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="Wall2/StaticBody2D" index="0"]
+visible = false
+polygon = PoolVector2Array( 1021.17, 92.4271, 952.486, 108.174, 854.722, 166.4, 755.343, 244.647, 593.054, 326.475, 439.4, 423.238, 256.103, 471.84, 46.064, 573.063, 25.7109, 527.393, 239.673, 424.616, 420.944, 376.769, 569.702, 282.263, 730.502, 201.255, 827.562, 124.42, 933.591, 61.8813, 1011.21, 43.4282 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 111.764, 36.5792 )
@@ -29,3 +39,5 @@ scale = Vector2( 5.28552, 5.28552 )
 texture = ExtResource( 3 )
 
 [editable path="Wall"]
+
+[editable path="Wall2"]
